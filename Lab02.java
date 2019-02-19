@@ -22,7 +22,7 @@ public class Lab02 {
 		for (String key : map.keySet()) {
 		    System.out.println("'" + (char)Integer.parseInt(key,2) +"' appeared " + map.get(key)+ " times");
 		}
-		
+		 
 	}
 
 
