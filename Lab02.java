@@ -4,23 +4,28 @@ public class Lab02 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		HashMap<String, Integer> map = new HashMap<String, Integer>();
 		
 		String s1 = sc.nextLine();
 		
-		for(int i = 0; i < s1.length(); i++) {
+		TreeMap<Character, Integer> map = new TreeMap<Character, Integer>();
+
+		for (int i = 0; i < s1.length(); i++) {
 			
 			char a = s1.charAt(i);
 			String binary = Integer.toBinaryString((int)a);
 			
-			while(binary.length() < 7) binary = "0"+binary;			
+			while (binary.length() < 7) binary = "0" + binary;
+			 
+			System.out.print(binary + " ");
 			
-			if(map.containsKey(binary))map.put(binary, map.get(binary)+1);
-			else map.put(binary, 1);
+			if(map.containsKey(a)) map.put(a, map.get(a)+1);
+			else map.put(a, 1);
 		}
+		System.out.println();
 		
-		for (String key : map.keySet()) {
-		    System.out.println("'" + (char)Integer.parseInt(key,2) +"' appeared " + map.get(key)+ " times");
+		for(Character key : map.keySet()) {
+			if(map.get(key) > 1) System.out.println("' " + key + "' " + "appeared " + map.get(key) + " times");
+			else System.out.println("' " + key + "' " + "appeared " + map.get(key) + " time");
 		}
 		 
 	}
