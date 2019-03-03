@@ -16,7 +16,7 @@ public class Lab02 {
 			
 			while (binary.length() < 7) binary = "0" + binary;
 			 
-			System.out.print(binary + " ");f
+			System.out.print(binary + " ");
 			
 			if(map.containsKey(a)) map.put(a, map.get(a)+1);
 			else map.put(a, 1);
